@@ -26,37 +26,46 @@ public class Vector {
         z = 0;
     }
     Point getCoord() { return coord; }
+
     void setCoord(Point coord) { this.coord = coord; }
-    void setX(double x) { this.x = x; }
-    void setY(double y) { this.x = y; }
-    void setZ(double z) { this.x = z; }
-    double getX() { return x; }
-    double getY() { return y; }
+    void setX(double x) {
+        this.x = x;
+    }
+    void setY(double y) {
+        this.y = y;
+    }
+    void setZ(double z) { this.z = z; }
+    double getX() {
+        return x;
+    }
+    double getY() {
+        return y;
+    }
     double getZ() { return z; }
     Vector addition(Vector next) {
-        Vector nvector = new Vector(coord.getX() + next.getX(), coord.getY() + next.getY(), coord.getZ() + next.getZ());
+        Vector nvector = new Vector(x + next.getX(), y + next.getY(), z + next.getZ());
         return nvector;
     }
     Vector subtraction(Vector next) {
-        Vector nvector = new Vector(coord.getX() - next.getX(), coord.getY() - next.getY(), coord.getZ() - next.getZ());
+        Vector nvector = new Vector(x - next.getX(), y - next.getY(), z - next.getZ());
         return nvector;
     }
     Point addition(Point next) {
-        Point nvector = new Point(coord.getX() + next.getX(), coord.getY() + next.getY(), coord.getZ() + next.getZ());
+        Point nvector = new Point(x + next.getX(), y + next.getY(), z + next.getZ());
         return nvector;
     }
     Point subtraction(Point next) {
-        Point nvector = new Point(coord.getX() - next.getX(), coord.getY() - next.getY(), coord.getZ() - next.getZ());
+        Point nvector = new Point(x - next.getX(), y - next.getY(), z - next.getZ());
         return nvector;
     }
     double scalar(Vector next) {
-        return coord.getX()*next.getX()+coord.getY()*next.getY()+coord.getZ()*next.getZ();
+        return x*next.getX()+y*next.getY()+y*next.getZ();
     }
     double length() {
-        return Math.sqrt(coord.getX()*coord.getX()+coord.getY()*coord.getY()+coord.getZ()*coord.getZ());
+        return Math.sqrt(x*x+y*y+z*z);
     }
     double Cos(Vector next) {
-        return Math.acos(scalar(next)/(length()*next.length()));
+        return scalar(next)/(length()*next.length());
     }
     void print() {
         coord.print();
