@@ -1,5 +1,4 @@
-public class Vector {
-    private double x, y, z;
+public class Vector extends Point{
     private Point coord;
     Vector (Point a, Point b) {
         coord = new Point(b.getX()-a.getX(), b.getY() - a.getY(), b.getZ() - a.getZ());
@@ -28,20 +27,6 @@ public class Vector {
     Point getCoord() { return coord; }
 
     void setCoord(Point coord) { this.coord = coord; }
-    void setX(double x) {
-        this.x = x;
-    }
-    void setY(double y) {
-        this.y = y;
-    }
-    void setZ(double z) { this.z = z; }
-    double getX() {
-        return x;
-    }
-    double getY() {
-        return y;
-    }
-    double getZ() { return z; }
     Vector addition(Vector next) {
         Vector nvector = new Vector(x + next.getX(), y + next.getY(), z + next.getZ());
         return nvector;
