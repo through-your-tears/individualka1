@@ -33,5 +33,6 @@ public class Main {
         System.out.println("Скалярное произведение первого и второго векторов: "+a.scalar(b));
         System.out.println("Длина первого вектора: "+a.length());
         System.out.println("Косинус угла между векторами: "+a.Cos(b));
+
     }
 }
