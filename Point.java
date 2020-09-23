@@ -1,5 +1,5 @@
 public class Point {
-    private double x ,y, z;
+    protected double x ,y, z;
     Point(double x, double y, double z) {
         this.x = x;
         this.y = y;
